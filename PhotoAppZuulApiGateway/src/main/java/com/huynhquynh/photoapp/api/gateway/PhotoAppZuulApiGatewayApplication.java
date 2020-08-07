@@ -1,15 +1,17 @@
-package com.huynhquynh.photoapp.api.users;
+package com.huynhquynh.photoapp.api.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class PhotoAppApiUsersApplication {
+@EnableZuulProxy
+public class PhotoAppZuulApiGatewayApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PhotoAppApiUsersApplication.class, args);
+		SpringApplication.run(PhotoAppZuulApiGatewayApplication.class, args);
 	}
 
 }

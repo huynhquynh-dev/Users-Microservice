@@ -1,4 +1,4 @@
-package com.huynhquynh.photoapp.api.users;
+package com.huynhquynh.photoapp.api.account;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class PhotoAppApiUsersApplication {
+public class PhotoAppAccountManagementApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PhotoAppApiUsersApplication.class, args);
+		SpringApplication.run(PhotoAppAccountManagementApplication.class, args);
 	}
 
 }
