@@ -72,6 +72,4 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 		response.addHeader("userId", userDetails.getUserId());
 	}
 	
-	
-
 }

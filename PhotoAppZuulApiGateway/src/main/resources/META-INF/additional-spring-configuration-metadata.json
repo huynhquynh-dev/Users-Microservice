@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "api.login.url.path",
+    "type": "java.lang.String",
+    "description": "A description for 'api.login.url.path'"
+  },
+  {
+    "name": "api.registration.url.path",
+    "type": "java.lang.String",
+    "description": "A description for 'api.registration.url.path'"
+  },
+  {
+    "name": "api.h2-console.url.path",
+    "type": "java.lang.String",
+    "description": "A description for 'api.h2-console.url.path'"
+  },
+  {
+    "name": "api.users.actuator.url.path",
+    "type": "java.lang.String",
+    "description": "A description for 'api.users.actuator.url.path'"
+  },
+  {
+    "name": "authorization.token.header.name",
+    "type": "java.lang.String",
+    "description": "A description for 'authorization.token.header.name'"
+  },
+  {
+    "name": "authorization.token.header.prefix",
+    "type": "java.lang.String",
+    "description": "A description for 'authorization.token.header.prefix'"
+  },
+  {
+    "name": "token.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'token.secret'"
+  }
+]}

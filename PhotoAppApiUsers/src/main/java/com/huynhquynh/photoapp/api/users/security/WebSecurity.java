@@ -58,6 +58,4 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 		auth.userDetailsService(usersService).passwordEncoder(bCryptPasswordEncoder);
 	}
 	
-	
-
 }
