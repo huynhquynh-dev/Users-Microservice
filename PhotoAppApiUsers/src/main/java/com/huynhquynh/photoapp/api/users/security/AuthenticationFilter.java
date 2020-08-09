@@ -63,10 +63,10 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 		UserDto userDetails = usersService.getUserDetailsByEmail(username);
 		
 		String token = Jwts.builder()
-				.setSubject(userDetails.getUserId())
-				.setExpiration(new Date(System.currentTimeMillis() + Long.parseLong(environment.getProperty("token.expiration_time"))))
-				.signWith(SignatureAlgorithm.HS512, environment.getProperty("token.secret"))
-				.compact();
+                .setSubject(userDetails.getUserId())
+                .setExpiration(new Date(System.currentTimeMillis() + Long.parseLong(environment.getProperty("token.expiration_time"))))
+                .signWith(SignatureAlgorithm.HS512, environment.getProperty("token.secret"))
+                .compact();
 		
 		response.addHeader("token", token);
 		response.addHeader("userId", userDetails.getUserId());
