@@ -5,6 +5,7 @@ import javax.validation.Valid;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -28,10 +29,16 @@ public class UsersController {
 	
 	@Autowired
 	UsersService usersService;
+	
+	@Value("${token.secret}")
+    String token;
+ 
+    @Value("${server.port}")
+    private String port;
 
 	@RequestMapping("/status/check")
 	public String status() {
-		return "Working on port: " + env.getProperty("local.server.port") + " : " + env.getProperty("local.server.address");
+		return "Working on port " + port + " with token " + token;
 	}
 	
 	@PostMapping(
