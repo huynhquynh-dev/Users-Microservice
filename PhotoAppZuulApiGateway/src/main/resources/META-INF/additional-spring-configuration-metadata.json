@@ -33,5 +33,10 @@
     "name": "token.secret",
     "type": "java.lang.String",
     "description": "A description for 'token.secret'"
+  },
+  {
+    "name": "api.zuul.actuator.url.path",
+    "type": "java.lang.String",
+    "description": "A description for 'api.zuul.actuator.url.path'"
   }
 ]}
