@@ -6,40 +6,42 @@ import java.util.UUID;
 
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.core.env.Environment;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
+import com.huynhquynh.photoapp.api.users.data.AlbumsServiceClient;
 import com.huynhquynh.photoapp.api.users.data.UserEntity;
 import com.huynhquynh.photoapp.api.users.repository.UsersRepository;
 import com.huynhquynh.photoapp.api.users.service.UsersService;
 import com.huynhquynh.photoapp.api.users.shared.UserDto;
 import com.huynhquynh.photoapp.api.users.ui.model.AlbumResponseModel;
 
+import feign.FeignException;
+
 @Service
 public class UsersServiceImpl implements UsersService {
 
 	UsersRepository userRepository;
 	BCryptPasswordEncoder bCryptPasswordEncoder;
-	RestTemplate restTemplate;
+//	RestTemplate restTemplate;
 	Environment environment;
+	AlbumsServiceClient albumsServiceClient;
+
+	Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
-	public UsersServiceImpl(UsersRepository userRepository, 
-			BCryptPasswordEncoder bCryptPasswordEncoder,
-			RestTemplate restTemplate,
-			Environment environment) {
+	public UsersServiceImpl(UsersRepository userRepository, BCryptPasswordEncoder bCryptPasswordEncoder,
+			AlbumsServiceClient albumsServiceClient, Environment environment) {
 		this.userRepository = userRepository;
 		this.bCryptPasswordEncoder = bCryptPasswordEncoder;
-		this.restTemplate = restTemplate;
+		this.albumsServiceClient = albumsServiceClient;
 		this.environment = environment;
 	}
 
@@ -96,14 +98,20 @@ public class UsersServiceImpl implements UsersService {
 
 		UserDto userDto = new ModelMapper().map(entity, UserDto.class);
 
-		String albumsUrl = String.format(environment.getProperty("albums.url"), userId);
 //		String albumsUrl = String.format("http://ALBUMS-WS/users/%s/albums", userId);
+//		String albumsUrl = String.format(environment.getProperty("albums.url"), userId);
+//		ResponseEntity<List<AlbumResponseModel>> albumsListResponse = restTemplate.exchange(albumsUrl, HttpMethod.GET,
+//				null, new ParameterizedTypeReference<List<AlbumResponseModel>>() {
+//				});
+//		List<AlbumResponseModel> albumsList = albumsListResponse.getBody();
 
-		ResponseEntity<List<AlbumResponseModel>> albumsListResponse = restTemplate.exchange(albumsUrl, HttpMethod.GET,
-				null, new ParameterizedTypeReference<List<AlbumResponseModel>>() {
-				});
-		List<AlbumResponseModel> albumsList = albumsListResponse.getBody();
-		
+		List<AlbumResponseModel> albumsList = null;
+		try {
+			albumsList = albumsServiceClient.getAlbums(userId);
+		} catch (FeignException e) {
+			logger.error(e.getLocalizedMessage());
+		}
+
 		userDto.setAlbums(albumsList);
 
 		return userDto;
