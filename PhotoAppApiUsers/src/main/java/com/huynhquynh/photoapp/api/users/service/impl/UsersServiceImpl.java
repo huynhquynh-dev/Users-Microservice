@@ -23,8 +23,6 @@ import com.huynhquynh.photoapp.api.users.service.UsersService;
 import com.huynhquynh.photoapp.api.users.shared.UserDto;
 import com.huynhquynh.photoapp.api.users.ui.model.AlbumResponseModel;
 
-import feign.FeignException;
-
 @Service
 public class UsersServiceImpl implements UsersService {
 
@@ -105,13 +103,15 @@ public class UsersServiceImpl implements UsersService {
 //				});
 //		List<AlbumResponseModel> albumsList = albumsListResponse.getBody();
 
-		List<AlbumResponseModel> albumsList = null;
-		try {
-			albumsList = albumsServiceClient.getAlbums(userId);
-		} catch (FeignException e) {
-			logger.error(e.getLocalizedMessage());
-		}
+//		List<AlbumResponseModel> albumsList = null;
+//		try {
+//			albumsList = albumsServiceClient.getAlbums(userId);
+//		} catch (FeignException e) {
+//			logger.error(e.getLocalizedMessage()); 
+//		}
 
+		List<AlbumResponseModel> albumsList = albumsServiceClient.getAlbums(userId);
+		
 		userDto.setAlbums(albumsList);
 
 		return userDto;
