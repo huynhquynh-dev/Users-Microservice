@@ -1,0 +1,66 @@
+2020-08-16 12:40:56.590  INFO 3660 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : No active profile set, falling back to default profiles: default
+2020-08-16 12:40:58.315  WARN 3660 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-08-16 12:40:58.589  INFO 3660 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b769cdc2-9742-3056-bf01-946cba0267c6
+2020-08-16 12:40:59.850  INFO 3660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2020-08-16 12:40:59.866  INFO 3660 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-16 12:40:59.871  INFO 3660 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-16 12:41:00.097  INFO 3660 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-16 12:41:00.097  INFO 3660 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3476 ms
+2020-08-16 12:41:00.237  WARN 3660 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-16 12:41:00.238  INFO 3660 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-16 12:41:00.259  INFO 3660 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@1af86c2c
+2020-08-16 12:41:00.456  WARN 3660 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-16 12:41:00.457  INFO 3660 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-16 12:41:00.971  INFO 3660 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-16 12:41:02.401  WARN 3660 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-08-16 12:41:03.126  WARN 3660 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-08-16 12:41:03.233  INFO 3660 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-08-16 12:41:03.438  INFO 3660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 49545 (http) with context path ''
+2020-08-16 12:41:03.444  INFO 3660 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 49545
+2020-08-16 12:41:03.457  INFO 3660 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-08-16 12:41:03.534  INFO 3660 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-08-16 12:41:04.359  INFO 3660 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-08-16 12:41:04.360  INFO 3660 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-08-16 12:41:04.572  INFO 3660 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-08-16 12:41:04.573  INFO 3660 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-08-16 12:41:04.928  INFO 3660 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-08-16 12:41:05.327  INFO 3660 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-08-16 12:41:05.327  INFO 3660 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-08-16 12:41:05.327  INFO 3660 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-08-16 12:41:05.328  INFO 3660 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-08-16 12:41:05.328  INFO 3660 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-08-16 12:41:05.328  INFO 3660 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-08-16 12:41:05.328  INFO 3660 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-08-16 12:41:05.864  INFO 3660 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-08-16 12:41:05.871  INFO 3660 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-08-16 12:41:05.875  INFO 3660 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-08-16 12:41:05.884  INFO 3660 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1597556465880 with initial instances count: 1
+2020-08-16 12:41:05.886  INFO 3660 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application ALBUMS-WS with eureka with status UP
+2020-08-16 12:41:05.890  INFO 3660 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1597556465890, current=UP, previous=STARTING]
+2020-08-16 12:41:05.895  INFO 3660 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:64cf239f7f97ab15fb25708560d08c75: registering service...
+2020-08-16 12:41:05.971  INFO 3660 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:64cf239f7f97ab15fb25708560d08c75 - registration status: 204
+2020-08-16 12:41:06.512  INFO 3660 --- [restartedMain] c.a.p.a.a.PhotoAppApiAlbumsApplication   : Started PhotoAppApiAlbumsApplication in 11.986 seconds (JVM running for 14.277)
+2020-08-16 12:43:04.528  INFO 3660 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-16 12:43:04.528  INFO 3660 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-16 12:43:04.546  INFO 3660 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-08-16 12:46:05.344  INFO 3660 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-08-16 12:51:05.359  INFO 3660 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-08-16 12:56:05.365  INFO 3660 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-08-16 13:01:05.368  INFO 3660 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-08-16 13:06:05.373  INFO 3660 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-08-16 13:11:05.375  INFO 3660 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-08-16 13:16:05.390  INFO 3660 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-08-16 13:21:05.393  INFO 3660 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-08-16 13:26:05.410  INFO 3660 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-08-16 13:30:10.285  INFO 3660 --- [RMI TCP Connection(54)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-08-16 13:30:10.344  INFO 3660 --- [RMI TCP Connection(54)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application ALBUMS-WS with eureka with status DOWN
+2020-08-16 13:30:10.346  WARN 3660 --- [RMI TCP Connection(54)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1597559410344, current=DOWN, previous=UP]
+2020-08-16 13:30:10.347  INFO 3660 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:64cf239f7f97ab15fb25708560d08c75: registering service...
+2020-08-16 13:30:10.375  INFO 3660 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:64cf239f7f97ab15fb25708560d08c75 - registration status: 204
+2020-08-16 13:30:10.628  INFO 3660 --- [RMI TCP Connection(54)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-08-16 13:30:10.644  INFO 3660 --- [RMI TCP Connection(54)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-08-16 13:30:10.718  INFO 3660 --- [RMI TCP Connection(54)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-16 13:30:10.754  INFO 3660 --- [RMI TCP Connection(54)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-08-16 13:30:13.770  INFO 3660 --- [RMI TCP Connection(54)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-08-16 13:30:13.784  INFO 3660 --- [RMI TCP Connection(54)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_ALBUMS-WS/albums-ws:64cf239f7f97ab15fb25708560d08c75 - deregister  status: 200
+2020-08-16 13:30:13.823  INFO 3660 --- [RMI TCP Connection(54)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

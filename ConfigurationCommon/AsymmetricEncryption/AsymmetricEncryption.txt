@@ -1,0 +1,1 @@
+keytool -genkeypair -alias myApiKey -keyalg RSA -dname "CN=Lion Huynh,OU=API Development,O=huynhquynh.com,L=Quan9,S=HCM,C=VietNam" -keypass lionhuynh -keystore mahoa.jks -storepass lionhuynh
